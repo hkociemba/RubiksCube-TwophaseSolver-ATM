@@ -10,9 +10,9 @@ cubestring = 'DUUBULDBFRBFRRULLLBRDFFFBLURDBFDFDRFRULBLUFDURRBLBDUDL'  # cube de
 #  Uncomment this part if you want to use method 1
 """"
 import solver as sv
-a = sv.solve(cubestring, 20, 2)  # solve with a maximum of 20 moves and a timeout of 2 seconds for example
+a = sv.solve(cubestring, 18, 2)  # solve with a maximum of 18 moves and a timeout of 2 seconds for example
 print(a)
-a = sv.solve(cubestring, 14, 500)  # solve with a maximum of 18 moves and a timeout of 5 seconds for example
+a = sv.solve(cubestring, 15, 5)  # solve with a maximum of 15 moves and a timeout of 5 seconds for example
 print(a)
 quit()
 """
@@ -27,9 +27,9 @@ quit()
 # Method 2a: Start the server from inside a Python script:
 import start_server
 from threading import Thread
-background_thread = Thread(target=start_server.start, args=(8080, 15, 100000))
+background_thread = Thread(target=start_server.start, args=(8080, 15, 1))
 background_thread.start()
-# Server listens now on port 8080, maxlength 20 moves, timeout 2 seconds
+# Server listens now on port 8080, maxlength 15 moves, timeout 1 seconds
 # ----------------------------------------------------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------------------------------------------------
